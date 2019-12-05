@@ -22,15 +22,15 @@ $(document).ready(function () {
     document.querySelector("body > div:nth-child(4) > button").addEventListener("click", addTrain);
 
     function addTrain() {
-        name = document.querySelector("#trainName").value.val().trim();;
-        destination = document.querySelector("#Destination").value.val().trim();;
-        train = document.querySelector("#firstTraintime").value.val().trim();;
-        frequency = document.querySelector("#frequency").value.val().trim();;
+        name = document.querySelector("#trainName").value.val().trim();
+        destination = document.querySelector("#Destination").value.val().trim();
+        train = document.querySelector("#firstTraintime").value.val().trim();
+        frequency = document.querySelector("#frequency").value.val().trim();
         database.ref().push({
-            name: name,
-            destination: destination,
-            train: train,
-            frequency: frequency,
+          name,
+          destination,
+          train,
+          frequency,
             dateAdded: firebase.database.ServerValue.TIMESTAMP
         });
     }
